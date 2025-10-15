@@ -1,11 +1,14 @@
 cmake_minimum_required(VERSION 3.10.0)
-project(schrodinger VERSION 0.1.0 LANGUAGES C CXX)
+project(double_slit_experiment VERSION 0.1.0 LANGUAGES C CXX)
 
-add_executable(schrodinger src/schrodinger_equation.cpp
+add_executable(${PROJECT_NAME} src/schrodinger_equation.cpp
+                           src/interferometer.cpp
+                           src/crank_nicolson_manager.cpp
+                           src/wavefunction_builder.cpp
                            src/main.cpp)
+
 find_package(eigen3 REQUIRED)
 find_package(raylib REQUIRED)
-
 if(eigen3_FOUND)
     message(STATUS "Found eigen3")
 else()
