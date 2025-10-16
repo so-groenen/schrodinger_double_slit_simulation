@@ -6,7 +6,7 @@
 /build
 CMakePresets.json
 .vscode
-
+/eigen-5.0.0
 # Compiled Object files
 *.slo
 *.lo
